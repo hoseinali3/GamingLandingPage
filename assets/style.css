@@ -1,0 +1,434 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: sans-serif;
+    background-color: #2e2e2e;
+color: #fff;
+
+}
+
+:root{
+    --light-orange:#ffa929;
+    --darker-orange:#e49012;
+    --golden: #daa814;
+}
+
+
+
+
+.scroll-Body{
+    width: 100%;
+    overflow-y: scroll;
+  }
+  .scroll-Body::-webkit-scrollbar-button {display:none}
+  .scroll-Body::-webkit-scrollbar {
+    background-color:transparent;
+    width:14px;
+  }
+  .scroll-Body::-webkit-scrollbar-track  {
+    background-color:#2e2e2e;
+  }
+  .scroll-Body::-webkit-scrollbar-thumb {
+    background-color:var(--light-orange);
+    border-radius:16px;
+    border:5px solid #2e2e2e;
+    
+  }
+  .scroll-Body::-webkit-scrollbar-thumb:hover {
+    background-color:var(--light-orange);
+    border:4px solid #2e2e2e;
+  }
+.grid-container{
+   
+    
+    display: grid;
+    grid-template-columns: repeat(6,1fr) ; 
+   grid-template-rows: 100vh repeat(5,max-content);
+ 
+
+}
+
+.header{
+    background-color: #000;
+    grid-column: 1/-1;
+    background-image:linear-gradient(to bottom left,#4d4c4c00,#4d4c4cc2, rgb(0, 0, 0)), url(../imgs/god_of_war_iii_5-wallpaper-1920x1080.jpg);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-rows: repeat(3,max-content);
+    grid-gap: 30px;
+    text-align: center;
+    justify-content: center;
+align-content: center;
+}
+
+.header-title{
+    font-size: 55px;
+}
+.header-title span{
+    color: var(--light-orange);
+}
+.header-subtitle{
+    font-size: 35px;
+}
+.header-Btn{
+padding: 20px 30px;
+font-family: sans-serif;
+font-size: 22px;
+background-color: var(--darker-orange);
+color: #fff;
+border: none;
+transition: 0.2s;
+justify-self: center;
+border-radius: 10px;
+cursor: pointer;
+}
+
+.header-Btn:hover{
+    color: var(--light-orange);
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.story{
+    grid-column: 1/-1;
+
+  
+}
+.section-title{
+    text-align: center;
+   
+    margin: 0.7em 0 0.5em 0;
+    color: var(--light-orange);
+    grid-column: 1/-1;
+   
+}
+.section-title::before,
+.section-title::after{
+    content: '';
+    width: 5%;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+.section-title::before{
+    right: 0.5em;
+}
+.section-title::after{
+    left: 0.5em;
+}
+.story-img{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+.images,
+.services-images{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.images:hover{
+    transform: scale(0.97);
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+.services{
+    grid-column: 2/6;
+}
+
+.services-section{
+    display: grid;
+    grid-template-rows: repeat(2,250px);
+    grid-template-columns: repeat(auto-fit,minmax(300px,max-content));
+    grid-gap: 30px;
+   grid-row-gap: 70px;
+    padding: 20px;
+    justify-content: center;
+}
+.service-text{
+    text-align: center;
+    font-size: 21px;
+    margin: 10px 0;
+}
+.text{
+    font-size: 18px;
+}
+
+
+
+
+
+
+.reserve{
+grid-column: 1/-1;
+}
+.reserve-section{
+    display: grid;
+    grid-template-columns: 50px repeat(4,1fr) 50px;
+    
+  padding: 55px;
+  text-align: center;
+  background-image:linear-gradient(to bottom left,#4d4c4c00,#4d4c4cc2, rgb(0, 0, 0)), url(../imgs/kratos_god_of_war-wallpaper-1600x900.jpg);
+  background-position: center;
+  background-size: cover;
+
+}
+.left{
+    grid-column: 2/3;
+    background-color: #000;
+display: grid;
+grid-template-rows: 2fr 1fr repeat(3,0.5fr) 2fr;
+padding: 1em 0 0 0;
+align-items: center;
+
+}
+
+
+.right{
+    grid-column: 3 / 6;
+    display: grid;
+grid-template-rows: 0.5fr 0.7fr 0.5fr 0.7fr 2fr;
+background-color: rgba(255, 255, 255, 0.85);
+padding: 10px;
+
+}
+.right-title,
+.reserve-branch,
+.parents{
+    color: var(--golden);
+}
+.right h4{
+    color: #000;
+}
+
+.rightBox{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.rightbox-img{
+    width: 100%;
+    height: auto;
+    clip-path: circle(28% at 50% 50%);
+
+}
+
+.section-title{
+    font-size: 35px;
+}
+.reserve-title{
+    font-size: 30px;
+}
+.reserve-branch{
+    font-size: 25px;
+}
+.left h6{
+    font-size: 16px;
+}
+.order-text{
+    font-size: 18px;
+}
+
+
+.right-title{
+    font-size: 32px;
+}
+.right h4{
+    font-size: 24px;
+}
+
+
+
+
+
+.gallery{
+    grid-column: 1/-1;
+}
+.gallery-section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,280px);
+    grid-gap: 1.5em;
+    padding: 70px;
+    
+    grid-template-areas: "gallery_1 gallery_1 gallery_2"
+                         "gallery_3 gallery_4 gallery_2"
+                         "gallery_3 gallery_5 gallery_5";
+}
+
+.image-gallery{
+    width: 100%;
+    border-radius: 10px;
+    background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+transition: 0.2s;
+}
+.image-gallery:hover{
+    opacity: 0.8;
+    transform: scale(0.97);
+}
+.gallery1{
+        grid-area: gallery_1;
+   background-image: url(../imgs/god_of_war_iii_4-wallpaper-1600x900.jpg); 
+
+}
+
+.gallery2{
+    grid-area: gallery_2;
+   background-image: url(../imgs/god_of_war-wallpaper-1600x900.jpg); 
+
+}
+
+.gallery3{
+    grid-area: gallery_3;
+   background-image: url(../imgs/god_of_war_game_battle_3-wallpaper-1600x900.jpg); 
+ 
+}
+
+.gallery4{
+    grid-area: gallery_4;
+   background-image: url(../imgs/god_of_war_ascension_3-wallpaper-1600x900.jpg); 
+
+}
+
+.gallery5{
+        grid-area: gallery_5;
+   background-image: url(../imgs/god_of_war_iii_5-wallpaper-1920x1080.jpg); 
+   
+}
+
+
+
+
+
+.footer{
+    grid-column: 1/-1;
+    border-top: 1px solid var(--light-orange);
+    margin-bottom: 3em;
+}
+.footer-section{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,max-content)); 
+  grid-template-rows: 1fr;
+  padding: 20px;
+  text-align: center;
+  justify-content: space-around;
+  margin: 1em 0;
+}
+
+
+.footer-title{
+    font-size: 23px;
+    color: var(--light-orange);
+}
+
+ul{
+    list-style: none;
+}
+li{
+    margin: 20px 0 0 0;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+li:hover{
+    color: var(--light-orange);
+}
+
+@media screen and (max-width:1100px){
+    .image-4{
+        grid-column: 2/3;
+    }
+    .reserve-title{
+        font-size: 21px;
+    }
+    .reserve-branch{
+        font-size: 18px;
+    }
+    .left h6{
+        font-size: 12px;
+    }
+    .order-text{
+        font-size: 14px;
+    }
+
+
+
+    .right{
+        align-items: center;
+    }
+    .right-title{
+        font-size: 22px;
+    }
+    .right h4{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .gallery-section{
+        grid-template-areas: "gallery_1 gallery_1 gallery_2"
+                             "gallery_3 gallery_4 gallery_4"
+                             "gallery_5 gallery_5 gallery_5";
+    }
+}
+
+@media screen and (max-width:800px){
+    .gallery-section{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,280px);
+        grid-template-areas: "gallery_1 gallery_1"
+                             "gallery_2 gallery_3"
+                             "gallery_4 gallery_4"
+                             "gallery_5 gallery_5";
+                             padding: 20px;
+    }
+.reserve-section{
+    padding: 10px 0;
+    grid-template-columns: 15px repeat(4,1fr) 15px;
+}
+
+}
+@media screen and (max-width:500px){
+    .image-4{
+        grid-column: auto;
+    }
+.section-title{
+    font-size: 28px;
+}
+
+}
